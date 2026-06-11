@@ -7,11 +7,40 @@ const servicesData = [
     { id: 5, name: 'Leather & Suede Cleaning', price: 999.00 },
     { id: 6, name: 'Wedding Dress Cleaning', price: 2999.00 }
 ];
-let cart = [];
+let cart = JSON.parse(localStorage.getItem("cart")) || [];
 // 2. Smooth Scroll to Booking Section
 function scrollToBooking() {
     document.getElementById('booking-section').scrollIntoView({ behavior: 'smooth' });
 }
+
+document
+    .getElementById("subscribe-btn")
+    .addEventListener("click", () => {
+
+        const name =
+            document.getElementById("newsletter-name").value.trim();
+
+        const email =
+            document.getElementById("newsletter-email").value.trim();
+
+        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+        if (name === "" || email === "") {
+            alert("Please fill all fields");
+            return;
+        }
+
+        if (!emailPattern.test(email)) {
+            alert("Please enter a valid email");
+            return;
+        }
+
+        alert("Newsletter subscription successful!");
+
+        document.getElementById("newsletter-name").value = "";
+        document.getElementById("newsletter-email").value = "";
+    });
+
 // 3. Render Service List Dynamically
 function renderServices() {
     const container = document.getElementById('services-list-container');
@@ -42,10 +71,17 @@ if (service && !cart.some(item => item.id === id)) {
         renderServices();
     }
 }
-function removeFromCart(id) {
-    cart = cart.filter(item => item.id !== id);
-    updateCartUI();
-    renderServices();
+function addToCart(id) {
+    const service = servicesData.find(s => s.id === id);
+
+    if (service && !cart.some(item => item.id === id)) {
+        cart.push(service);
+
+        localStorage.setItem("cart", JSON.stringify(cart));
+
+        updateCartUI();
+        renderServices();
+    }
 }
 function updateCartUI() {
     const tbody = document.getElementById('cart-table-body');
@@ -92,7 +128,70 @@ alert("Please add at least one service to your cart before booking.");
  function showSuccess() {
 confirmMsg.style.display = 'block';
         // Reset form and cart
- document.getElementById('booking-form').reset();
+     document.getElementById("booking-form")
+         .addEventListener("submit", function (e) {
+
+             e.preventDefault();
+
+             if (cart.length === 0) {
+                 alert("Please add at least one service.");
+                 return;
+             }
+
+             const email =
+                 document.getElementById("email_id").value.trim();
+
+             const phone =
+                 document.getElementById("phone_number").value.trim();
+
+             const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+             const phonePattern = /^[0-9]{10}$/;
+
+             if (!emailPattern.test(email)) {
+                 alert("Please enter a valid email.");
+                 return;
+             }
+
+             if (!phonePattern.test(phone)) {
+                 alert("Please enter a valid 10 digit phone number.");
+                 return;
+             }
+
+             const confirmMsg =
+                 document.getElementById("confirmation-message");
+
+             emailjs.sendForm(
+                 "YOUR_SERVICE_ID",
+                 "YOUR_TEMPLATE_ID",
+                 this
+             )
+                 .then(() => {
+
+                     confirmMsg.style.display = "block";
+
+                     this.reset();
+
+                     cart = [];
+
+                     localStorage.removeItem("cart");
+
+                     updateCartUI();
+                     renderServices();
+
+                     setTimeout(() => {
+                         confirmMsg.style.display = "none";
+                     }, 5000);
+
+                 })
+                 .catch((error) => {
+
+                     console.log(error);
+
+                     alert(
+                         "Email sending failed. Please try again."
+                     );
+                 });
+         });
  cart = [];
  updateCartUI();
 renderServices();

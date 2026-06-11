@@ -10,7 +10,7 @@
     <script type="text/javascript">
  (function () {
             // Replace with your actual EmailJS Public Key
-            emailjs.init("YOUR_PUBLIC_KEY");
+
  })();
     </script>
 </head>
@@ -135,14 +135,18 @@
                 stress-free.</p>
 </div>
     </section>
-    <section class="newsletter">
-         <div class="container newsletter-container">
-<h2>Subscribe to our<br>newsletter.</h2>
-        <div class="newsletter-form">
- <input type="text" placeholder="Full name">
-  <input type="email" placeholder="Email">
- <button class="btn-subscribe">Subscribe</button>
- </div>
+    <!--  -->
+<div class="newsletter-form">
+    <input type="text" id="newsletter-name" placeholder="Full name">
+
+    <input type="email" id="newsletter-email" placeholder="Email">
+
+    <button type="button" class="btn-subscribe" id="subscribe-btn">
+        Subscribe
+    </button>
+    <!--  -->
+</div>
+
         </div>
     </section>
     <footer>

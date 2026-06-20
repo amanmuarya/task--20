@@ -2,116 +2,110 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
- <title>Expert Laundry Services</title>
- <link rel="stylesheet" href="style.css">
- <!-- type script  -->
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-    <script type="text/javascript">
- (function () {
-            // Replace with your actual EmailJS Public Key
-
- })();
-    </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expert Laundry Services</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- EmailJS SDK -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 </head>
 <body>
     <nav class="container">
         <div class="logo">Logo</div>
         <ul class="nav-links">
-<li><a href="#">Home</a></li>
-    <li><a href="#">Services</a></li>
-  <li><a href="#">About Us</a></li>
-  <li><a href="#">Contact Us</a></li>
+            <li><a href="#home-section">Home</a></li>
+            <li><a href="#booking-section">Services</a></li>
+            <li><a href="#about-section">About Us</a></li>
+            <li><a href="#contact-section">Contact Us</a></li>
         </ul>
         <button class="btn-user">Username</button>
     </nav>
-    <header class="container hero">
+    <header id="home-section" class="container hero">
         <div class="hero-left">
             <h1>Revitalize Your<br>Clothes with Expert<br><span>Laundry Services!</span></h1>
-     <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit., we deliver care and convenience. Schedule a pickup and
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit., we deliver care and convenience. Schedule a
+                pickup and
                 rediscover the freshness of your clothes today!</p>
- <button class="btn-primary" onclick="scrollToBooking()">Book a service today!</button>
+            <button class="btn-primary" onclick="scrollToBooking()">Book a service today!</button>
         </div>
-     <div class="hero-right">
-        <!-- js  -->
- <img src="https://cdn-icons-png.flaticon.com/512/8205/8205168.png" alt="Washing Machine"
-          style="opacity: 0.8;">
+        <div class="hero-right">
+            <img src="https://cdn-icons-png.flaticon.com/512/8205/8205168.png" alt="Washing Machine"
+                style="opacity: 0.8;">
         </div>
     </header>
     <section class="achievements">
         <div class="container achievements-container">
-    <h2>Our Achievements</h2>
-     <div class="stat">
-    <h3>15+</h3>
- <p>Laundry Services</p>
- </div>
-     <div class="stat">
-      <h3>240+</h3>
-      <p>Happy Customers</p>
-    </div>
-    <div class="stat">
-         <h3>2+ Yrs</h3>
- <p>Experience</p>
- </div>
+            <h2>Our Achievements</h2>
+            <div class="stat">
+                <h3>15+</h3>
+                <p>Laundry Services</p>
+            </div>
+            <div class="stat">
+                <h3>240+</h3>
+                <p>Happy Customers</p>
+            </div>
+            <div class="stat">
+                <h3>2+ Yrs</h3>
+                <p>Experience</p>
+            </div>
         </div>
     </section>
     <section id="booking-section" class="booking-section">
         <div class="container booking-container">
-   <div class="services-card">
+            <div class="services-card">
                 <h3>Our Services</h3>
                 <p>Click On The Add To Cart Button To Add The Services To Your Cart</p>
                 <div class="service-list" id="services-list-container">
                 </div>
                 <p class="info-bottom"> Add the items to the cart and book now</p>
-    </div>
-    <div class="cart-booking-wrapper">
-        <div class="cart-card">
- <h4>Added Items</h4>
-    <table class="cart-table">
-     <thead>
-    <tr>
-     <th>S.No</th>
-    <th>Service Name</th>
-     <th class="price-col">Price</th>
-    </tr>
-</thead>
- <tbody id="cart-table-body">
-          </tbody>
-    </table>
-    <div class="total-amount">
-           <span>Total Amount</span>
-      <span id="cart-total">₹0.00</span>
-    </div>
-     </div>
-      <div class="book-card">
-    <h4>Book Now</h4>
-     <form id="booking-form">
-         <div class="form-group">
-           <label>Full Name</label>
-        <input type="text" id="full_name" name="full_name" class="form-control"
-           placeholder="John Doe" required>
-             </div>
-                  <div class="form-row">
-                 <div class="form-group flex-1">
-                    <label>Email ID</label>
-                    <input type="email" id="email_id" name="email_id" class="form-control"
-           placeholder="mail@gmail.com" required>
             </div>
-            <div class="form-group flex-1">
-      <label>Phone Number</label>
-        <input type="tel" id="phone_number" name="phone_number" class="form-control"
-    placeholder="0000000000" required>
-         </div>
-     </div>
- <button type="submit" class="btn-primary btn-block">Book now</button>
- <p id="confirmation-message" class="success-msg">Thank you For Booking the Service We will get
-      back to you soon!</p>
-     </form>
-    </div>
-</div>
- </div>
+            <div class="cart-booking-wrapper">
+                <div class="cart-card">
+                    <h4>Added Items</h4>
+                    <table class="cart-table">
+                        <thead>
+                            <tr>
+                                <th>S.No</th>
+                                <th>Service Name</th>
+                                <th class="price-col">Price</th>
+                            </tr>
+                        </thead>
+                        <tbody id="cart-table-body">
+                        </tbody>
+                    </table>
+                    <div class="total-amount">
+                        <span>Total Amount</span>
+                        <span id="cart-total">₹0.00</span>
+                    </div>
+                </div>
+                <div class="book-card">
+                    <h4>Book Now</h4>
+                    <form id="booking-form">
+                        <div class="form-group">
+                            <label>Full Name</label>
+                            <input type="text" id="full_name" name="full_name" class="form-control"
+                                placeholder="John Doe" required>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group flex-1">
+                                <label>Email ID</label>
+                                <input type="email" id="email_id" name="email_id" class="form-control"
+                                    placeholder="mail@gmail.com" required>
+                            </div>
+                            <div class="form-group flex-1">
+                                <label>Phone Number</label>
+                                <input type="tel" id="phone_number" name="phone_number" class="form-control"
+                                    placeholder="0000000000" required>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn-primary btn-block">Book now</button>
+                        <p id="confirmation-message" class="success-msg">Thank you For Booking the Service We will get
+                            back to you soon!</p>
+                    </form>
+                </div>
+            </div>
+        </div>
     </section>
-    <section class="container qualities">
+    <section id="about-section" class="container qualities">
         <div class="quality-item">
             <h4 class="emoji-icon">🧼</h4>
             <h4>Premium Services</h4>
@@ -119,12 +113,12 @@
             </p>
         </div>
         <div class="quality-item">
-  <h4 class="emoji-icon">🎧</h4>
- <h4>Quick Support</h4>
+            <h4 class="emoji-icon">🎧</h4>
+            <h4>Quick Support</h4>
             <p>We're committed to providing prompt solutions to ensure your experience is smooth and worry-free.</p>
- </div>
-     <div class="quality-item">
- <h4 class="emoji-icon">🚚</h4>
+        </div>
+        <div class="quality-item">
+            <h4 class="emoji-icon">🚚</h4>
             <h4>Hassle Free Delivery</h4>
             <p>Enjoy seamless service with our convenient pickup and delivery options, tailored to your schedule.</p>
         </div>
@@ -133,51 +127,48 @@
             <h4>Affordable Prices</h4>
             <p>Experience exceptional care without breaking the bank — our affordable prices make laundry day
                 stress-free.</p>
-</div>
-    </section>
-    <!--  -->
-<div class="newsletter-form">
-    <input type="text" id="newsletter-name" placeholder="Full name">
-
-    <input type="email" id="newsletter-email" placeholder="Email">
-
-    <button type="button" class="btn-subscribe" id="subscribe-btn">
-        Subscribe
-    </button>
-    <!--  -->
-</div>
-
         </div>
     </section>
-    <footer>
+    <section class="newsletter">
+        <div class="container newsletter-container">
+            <h2>Subscribe to Our Newsletter</h2>
+            <div class="newsletter-form">
+                <input type="text" id="newsletter-name" placeholder="Full name">
+                <input type="email" id="newsletter-email" placeholder="Email">
+                <button type="button" class="btn-subscribe" id="subscribe-btn">
+                    Subscribe
+                </button>
+            </div>
+        </div>
+    </section>
+    <footer id="contact-section">
         <div class="container footer-container">
             <div class="footer-col">
-  <h3>Logo</h3>
- <h4 class="mt-15">About us</h4>
-     <p>hello  ipsum dolor sit amet consectetur. Sed At Congue.</p>
- </div>
-    <div class="footer-col">
+                <h3>Logo</h3>
+                <h4 class="mt-15">About us</h4>
+                <p>hello ipsum dolor sit amet consectetur. Sed At Congue.</p>
+            </div>
+            <div class="footer-col">
                 <h4>Important Links</h4>
                 <a href="#">About us</a>
                 <a href="#">Contact us</a>
                 <a href="#">Privacy Policy</a>
-               
                 <a href="#">Refund Policy</a>
-    </div>
-    <div class="footer-col">
- <h4>Contact</h4>
-    <p>hello@site.com<br>+91 91234 56780</p>
-</div>
- <div class="footer-col">
-         <h4>Follow Us</h4>
- <p>📸 <br>
+            </div>
+            <div class="footer-col">
+                <h4>Contact</h4>
+                <p>hello@site.com<br>+91 91234 56780</p>
+            </div>
+            <div class="footer-col">
+                <h4>Follow Us</h4>
+                <p>📸 <br>
 
-    𝕏 <br>
-    
-    📘</p>
-</div>
-</div>
-</footer>
+                    𝕏 <br>
+
+                    📘</p>
+            </div>
+        </div>
+    </footer>
     <script src="script.js"></script>
 </body>
 </html>

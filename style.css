@@ -1,4 +1,3 @@
-
 :root {
     --primary: #328cec;
     --primary-hover: #007bff;
@@ -11,25 +10,24 @@
 }
 * {
     margin: 0;
-padding: 0;
+    padding: 0;
     box-sizing: border-box;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-
 body {
- color: var(--text-dark);
+    color: var(--text-dark);
     background-color: #cfcbcb;
 }
 .container {
     max-width: 1200px;
-margin: 0 auto;
+    margin: 0 auto;
     padding: 0 20px;
 }
 /* Navbar */
 nav {
- display: flex;
+    display: flex;
     justify-content: space-between;
- align-items: center;
+    align-items: center;
     padding: 20px 0;
     background: #e8e4e4;
 }
@@ -39,13 +37,12 @@ nav {
 }
 .nav-links {
     list-style: none;
-display: flex;
+    display: flex;
     gap: 30px;
 }
-
 .nav-links li a {
-   text-decoration: none;
-color: var(--text-muted);
+    text-decoration: none;
+    color: var(--text-muted);
     font-weight: 500;
 }
 .nav-links li a:hover {
@@ -55,16 +52,16 @@ color: var(--text-muted);
     padding: 10px 20px;
     background-color: #d7e8fa;
     color: var(--primary);
- border: none;
- border-radius: 20px;
+    border: none;
+    border-radius: 20px;
     font-weight: 600;
     cursor: pointer;
 }
 /* Hero Section */
 .hero {
     display: flex;
-align-items: center;
-justify-content: space-between;
+    align-items: center;
+    justify-content: space-between;
     padding: 60px 0;
 }
 .hero-left {
@@ -80,40 +77,44 @@ justify-content: space-between;
 }
 .hero-left p {
     color: var(--text-muted);
- font-size: 16px;
+    font-size: 16px;
     margin-bottom: 30px;
     line-height: 1.6;
 }
 .btn-primary {
     padding: 15px 30px;
- background-color: var(--primary);
- color: white;
+    background-color: var(--primary);
+    color: white;
     border: none;
     border-radius: 8px;
     font-size: 16px;
-font-weight: bold;
+    font-weight: bold;
     cursor: pointer;
     transition: 0.3s;
 }
 .btn-primary:hover {
     background-color: var(--primary-hover);
 }
+
 .hero-right {
     max-width: 45%;
 }
+
 .hero-right img {
- width: 100%;
+    width: 100%;
     max-width: 400px;
 }
+
 /* Achievements Section */
 .achievements {
     background-color: var(--primary);
-color: white;
+    color: white;
     padding: 40px 0;
 }
+
 .achievements-container {
     display: flex;
-justify-content: space-between;
+    justify-content: space-between;
     align-items: center;
     width: 100%;
 }
@@ -133,7 +134,7 @@ justify-content: space-between;
 }
 /* Booking Services Section */
 .booking-section {
- background-color: var(--bg-light);
+    background-color: var(--bg-light);
     padding: 80px 0;
 }
 .booking-container {
@@ -141,25 +142,25 @@ justify-content: space-between;
     gap: 30px;
     justify-content: space-between;
 }
+
 /* Left Div - Services */
 .services-card {
     flex: 1;
- background: #fff;
-  padding: 30px;
+    background: #fff;
+    padding: 30px;
     border-radius: 12px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
 }
+
 .services-card h3 {
     margin-bottom: 5px;
     font-size: 24px;
 }
-
 .services-card>p {
     color: var(--text-muted);
-font-size: 14px;
+    font-size: 14px;
     margin-bottom: 25px;
 }
-
 .service-list {
     display: flex;
     flex-direction: column;
@@ -168,8 +169,8 @@ font-size: 14px;
 }
 .service-item {
     display: flex;
-justify-content: space-between;
- align-items: center;
+    justify-content: space-between;
+    align-items: center;
     padding: 15px 0;
     border-bottom: 1px solid var(--border);
 }
@@ -186,15 +187,14 @@ justify-content: space-between;
 .btn-add,
 .btn-remove {
     padding: 8px 15px;
-border-radius: 20px;
+    border-radius: 20px;
     border: none;
-font-size: 13px;
+    font-size: 13px;
     font-weight: 600;
     cursor: pointer;
 }
-
 .btn-add {
-background-color: var(--bg-light);
+    background-color: var(--bg-light);
     color: var(--text-dark);
 }
 .btn-remove {
@@ -203,29 +203,29 @@ background-color: var(--bg-light);
 }
 .info-bottom {
     color: var(--primary);
- font-size: 14px;
+    font-size: 14px;
     text-align: center;
     margin-top: 20px;
 }
 /* Right Div - Cart & Form */
 .cart-booking-wrapper {
- width: 400px;
- display: flex;
+    width: 400px;
+    display: flex;
     flex-direction: column;
     gap: 20px;
 }
 .cart-card,
 .book-card {
-background: #f9f5f5;
+    background: #f9f5f5;
     padding: 25px;
-border-radius: 12px;
+    border-radius: 12px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
 }
 .cart-card h4,
 .book-card h4 {
     text-align: center;
- margin-bottom: 20px;
- font-size: 18px;
+    margin-bottom: 20px;
+    font-size: 18px;
 }
 .cart-table {
     width: 100%;
@@ -235,8 +235,8 @@ border-radius: 12px;
 }
 .cart-table th {
     text-align: left;
-padding-bottom: 10px;
-  color: var(--text-muted);
+    padding-bottom: 10px;
+    color: var(--text-muted);
     font-weight: 500;
     border-bottom: 1px solid var(--border);
 }
@@ -249,12 +249,11 @@ padding-bottom: 10px;
 }
 .total-amount {
     display: flex;
- justify-content: space-between;
- font-weight: bold;
+    justify-content: space-between;
+    font-weight: bold;
     font-size: 16px;
     margin-top: 15px;
 }
-
 .form-group {
     margin-bottom: 15px;
 }
@@ -340,7 +339,6 @@ padding-bottom: 10px;
     color: white;
     background-color: var(--primary)
 }
-
 .newsletter-form input::placeholder {
     color: #e0e0e0;
 }
@@ -353,7 +351,6 @@ padding-bottom: 10px;
     font-weight: bold;
     cursor: pointer;
 }
-
 /* Footer  
   disribe footer like email 
 */
@@ -385,7 +382,6 @@ footer {
     margin-bottom: 8px;
     display: block;
 }
-
 .service-item,
 .btn-add,
 .btn-remove,
@@ -393,11 +389,9 @@ footer {
 .btn-subscribe {
     transition: all 0.3s ease;
 }
-
 .service-item:hover {
     transform: translateY(-4px);
 }
-
 .btn-add:hover,
 .btn-remove:hover,
 .btn-primary:hover,
